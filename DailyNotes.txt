@@ -94,8 +94,21 @@ Test test =new Test();//dependency injection
 			@Scope
 			@ComponentScan
 			@Configuration
+			@Service
+			@Repository
 		
 		
+NOTE:	spring has given annotations for user defined classes but not for predefined classes 	
 		
+		c3po,hikari,tomcat,dbcp....xml
+		transaction---
+		entitymanager----
+		
+		java config -->userdefined 
+		
+		
+		@configuration
+		
+		@Bean
 		
 		

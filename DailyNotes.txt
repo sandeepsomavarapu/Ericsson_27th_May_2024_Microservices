@@ -1,0 +1,101 @@
+Spring Framework
+=================
+
+spring is a non-invasive framework,which is used to create light weight and loosley coupled applications
+
+
+		invasive		struts		-->it will force to the developer to implement predefined api
+		non-invasive	spring,hibernate-->it will never force to the developer to implement predefined api
+		
+		light weight
+		heavy weight
+		
+		
+		loosley coupled
+		tightly coupled
+
+
+
+Servlet-->web applications
+
+		1)implements Servlet
+		2)extends GenericServlet
+		3)extends HttpServlet 	-->12
+
+class Login extends HttpServlet   
+{
+
+
+}
+
+100*12=1200
+
+EJB--->invasive--heavy weight 
+
+		ROD JOHNSON-->interface21-->spring framework-->2003 1.x
+		
+															6.x		
+spring.io
+
+loosley coupled:
+
+
+
+dependency injection (DP)
+
+
+class Test{
+
+Test(String name)
+{
+
+}
+m1()
+{
+
+}
+
+}
+
+//tightly coupled ,loosley coupled
+
+class Client
+{
+Test test =new Test();//dependency injection
+	test.m1()
+}
+
+			Spring container -->Object life cycle  -->getBean()
+				1)creation of object
+				2)cofiguring the objects
+				3)wiring the objects
+				4)destroying the objects
+	
+		BeanFactory,ApplicationContext--->configuration file--xml config,annotation config,java config
+		lazy			eager 
+		
+		
+		jars
+		
+		
+		
+		<beans>
+		
+			<bean>
+		spring core /IOC/DI Module
+		
+		setter injection		settermethod  --<property>
+		constructor injection	constructor  --<constructor-arg>
+		auto wiring 
+		
+		
+			@Component
+			@Autowired
+			@Scope
+			@ComponentScan
+			@Configuration
+		
+		
+		
+		
+		

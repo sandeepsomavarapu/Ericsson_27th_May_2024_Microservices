@@ -112,3 +112,122 @@ NOTE:	spring has given annotations for user defined classes but not for predefin
 		@Bean
 		
 		
+	JDBC--->sun -->API-->java.sql
+	
+		JPA/hibernate 
+		
+		
+		#CRUD
+#DDL DML  DRl
+#SQL
+#DDl-->data definition language  create,alter,drop,truncate,rename
+#table,sequence,synonum,views,index.....
+		
+create database ericsson1;
+use ericsson1;
+create table emp_info(eid int,ename varchar(15),esal int,eadd varchar(15));
+describe emp_info;
+alter table emp_info add edesg varchar(15);
+alter table emp_info drop eadd;
+alter table emp_info change eid empno int;
+alter table emp_info rename employees;
+drop table employees;#entire table including records will get deleted 
+truncate table employees;#it will make table as empty
+#DML insert,update,delete
+insert into emp_info values(123,'suresh',92000,'hyderabad');
+insert into emp_info values(124,'naresh',82000,'banglore');
+insert into emp_info values(125,'mahesh',99000,'delhi');
+insert into emp_info values(126,'ramesh',97500,'hyderabad');
+insert into emp_info values(128,'rajesh',-60,'chennai');
+insert into emp_info(eid) values(128);
+update emp_info set esal=esal+2000;
+update emp_info set esal=esal+5000,eadd='pune' where eid=125;
+delete from emp_info where eid=128;
+delete from emp_info;#same like truncate
+#DRL
+select * from emp_info;
+select * from emp_info order by esal;
+select * from emp_info order by ename;
+select * from emp_info order by ename desc;
+select * from emp_info where esal between 60000 and 90000;
+select eid,ename from emp_info;
+select max(esal) from emp_info;
+select min(esal) from emp_info;
+select sum(esal) from emp_info;
+select avg(esal) from emp_info;
+select count(esal) from emp_info;
+select sum(esal),eadd from emp_info group by eadd;
+select max(esal),eadd from emp_info group by eadd;
+select sum(esal),eadd from emp_info group by eadd having sum(esal)>100000;
+#contraints -->unique,nn,check,pk,fk
+#primary key=unique+notnull
+
+create table emp_info1(eid int primary key,ename varchar(15) not null,esal int check(esal>10000),eadd varchar(15));
+
+insert into emp_info1 values(123,'suresh',92000,'hyderabad');
+insert into emp_info1 values(124,'naresh',82000,'banglore');
+insert into emp_info1 values(125,'mahesh',99000,'delhi');
+insert into emp_info1 values(126,'ramesh',97500,'hyderabad');
+insert into emp_info1 values(128,'rajesh',10001,'chennai');
+insert into emp_info1(eid) values(128);		
+		
+		
+	JPA/hibernate	
+		
+	Spring /JPA-hibernate	
+		
+		JDBC API
+		
+		java-->Database
+	
+JPA-specification
+
+	JDBC
+		-->all the tables need to create
+		-->all the DML,DRL querys
+		-->checked exceptions
+		-->no cache 
+		-->boilerplate code
+
+	JPA
+		-->no table creation
+		--->no ddl,dml,drl querys
+		--->un checked exceptions
+		--->cache support
+		--->no boilerplate code 
+	ORM tools-->implementations of JPA
+		
+			eclipse link,top link,ibatis,hibernate....
+	
+	JPA-->Hibernate -->Object relational mapping
+	
+		entity 
+
+
+	java project--->
+		
+			Employee.java
+			Client.java
+			
+		META-INF persistence.xml-->config 
+				
+					database properties
+						username
+						password
+						driver class
+						url
+					hibernate properties
+						dialect class-->mysql dialect
+						hbm2ddlauto--->create/update
+						show_sql	--->true
+						
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
